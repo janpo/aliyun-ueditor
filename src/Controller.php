@@ -141,7 +141,9 @@ class Controller extends BaseController {
                 ];
                 break;
         }
-        return response()->json($result, 200, [], JSON_UNESCAPED_UNICODE);
+        Header('Content-Type:text/html; charset=utf-8');
+        echo json_encode($result);
+        //return response()->json($result, 200, [], JSON_UNESCAPED_UNICODE);
     }
 
 }
